@@ -1,0 +1,857 @@
+    1  clear
+    2  apt-get update
+    3  apt-get install open-vm-tools
+    4  apt-get upgrade
+    5  apt-get update
+    6  apt-get upgrade
+    7  clear
+    8  exit
+    9  upt-get update
+   10  apt-get update
+   11  apt-get upgrade
+   12  reboot
+   13  apt-get update
+   14  apt-get upgrade
+   15  reboot
+   16  apt-get update
+   17  apt-get upgrade
+   18  apt-get dist-upgrade
+   19  poweroff
+   20  apt-get update
+   21  exit
+   22  vim /etc/hsots
+   23  ping elk1
+   24  vim /etc/hsots
+   25  vim /etc/hosts
+   26  ip a
+   27  vim /etc/hosts
+   28  clear
+   29  ls
+   30  vi /etc/hostname 
+   31  apt-get update
+   32  ip a
+   33  vim /etc/ssh/sshd_config 
+   34  service ssh-server restart
+   35  /etc/init.d/ssh restat
+   36  /etc/init.d/ssh restart
+   37  reboot
+   38  apt-get -y python
+   39  apt-get -y install python
+   40  apt-get update
+   41  apt-get -y install python
+   42  vi /etc/hosts
+   43  vim /etc/network/interfaces
+   44  vi /etc/network
+   45  vi /etc/hostname 
+   46  vi /etc/hosts
+   47  apt-get update
+   48  poweroff
+   49  vim /etc/hostname 
+   50  vim /etc/host
+   51  vim /etc/hosts
+   52  ping ansible-1
+   53  ping ansible-2
+   54  ping ansible-3
+   55  exit
+   56  reboot
+   57  apt-get update
+   58  apt-get upgrade
+   59  ping 8.8.8.8
+   60  apt-get upgrade
+   61  clear
+   62  ls
+   63  cd ansible/
+   64  apt-get -y install vim
+   65  vim hosts
+   66  ansible ansible-2 -m ping
+   67  ansible ansible-1 -m ping
+   68  vim hosts
+   69  ping ansible-a
+   70  ping ansible-1
+   71  ping ansible-2
+   72  ping ansible-3
+   73  ansible ansible-1 -m ping
+   74  vim /etc/hosts
+   75  vim hosts
+   76  cp /tmp/ansible_aula1.txt /root/ansible/
+   77  ls
+   78  rm playbook.yml 
+   79  ls
+   80  mv ansible_aula1.txt playbook.yam
+   81  ls
+   82  vi playbook.yam 
+   83  vi hosts
+   84  ansible ansible-1 -m ping
+   85  vi hosts
+   86  ansible -i hosts webserver -m ping
+   87  ssh-key
+   88  ssh-keygen 
+   89  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-2
+   90  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-3
+   91  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-1
+   92  ansible -i hosts webserver -m ping
+   93  ansible -i hosts ansible-3 -m ping
+   94  ansible -i hosts ansible-2 -m ping
+   95  ansible -i hosts ansible-1 -m ping
+   96  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-2ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-2
+   97  ansible -i hosts ansible-1 -m ping
+   98  ansible-playbook playbook.yam 
+   99  vim playbook.yam 
+  100  ansible-playbook playbook.yam 
+  101  vim hosts
+  102  ping ansible-2
+  103  vim hosts
+  104  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-2
+  105  ansible-playbook playbook.yam 
+  106  vim hosts
+  107  ping ansible-2
+  108  [WARNING]: provided hosts list is empty, only localhost is available
+  109  vim playbook.yam 
+  110  ansible -i hosts ansible-1 -m ping
+  111  ansible -i hosts ansible-2 -m ping
+  112  ansible -i hosts ansible-3 -m ping
+  113  ansible-playbook playbook.yam 
+  114  vim playbook.yam 
+  115  ansible-playbook playbook.yam 
+  116  vim playbook.yam 
+  117  ansible-playbook playbook.yam 
+  118  vim playbook.yam 
+  119  ansible-playbook playbook.yam 
+  120  vim playbook.yam 
+  121  vim nginx.yam
+  122  ansible-playbook nginx.yam 
+  123  vim hosts
+  124  ls -la hosts
+  125  chmod 755 hosts
+  126  ansible-playbook nginx.yam 
+  127  ls
+  128  vim hosts
+  129  ansible
+  130  ansible-playbook nginx.yam 
+  131  vim hosts
+  132  mv hosts hosts.old
+  133  vim hosts
+  134  ansible -i hosts ansible-2 -m ping
+  135  ansible -i hosts ansible-1 -m ping
+  136  ansible-playbook nginx.yam 
+  137  vim nginx.yam 
+  138  ansible-playbook nginx.yam 
+  139  vim nginx.yam 
+  140  ansible-playbook --version
+  141  ls
+  142  rm hosts
+  143  mv hosts.old hosts
+  144  vim nginx.yam 
+  145  ansible-playbook --version
+  146  ansible-playbook nginx.yam 
+  147  ansible -i hosts -m ping all
+  148  vim nginx.yam 
+  149  ansible -i hosts -m ping all
+  150  vim nginx.yam 
+  151  ansible-playbook nginx.yam 
+  152  vim nginx.yam 
+  153  vim playbook.yam 
+  154  ansible-playbook playbook.yam 
+  155  vim playbook.yam 
+  156  ansible-playbook playbook.yam 
+  157  ansible -i hosts -m ping all
+  158  ansible-playbook playbook.yam 
+  159  root@ansible-1:~/ansible# ansible -i hosts -m ping all
+  160  ansible-1 | SUCCESS => {
+  161  }
+  162  ansible-2 | SUCCESS => {
+  163  }
+  164  ansible-3 | SUCCESS => {
+  165  }
+  166  root@ansible-1:~/ansible# ansible-playbook playbook.yam
+  167  PLAY [Instalando pacotes necessários] ******************************************
+  168  PLAY RECAP *********************************************************************
+  169  root@ansible-1:~/ansible#
+  170  clear
+  171  ansible -i hosts -m ping all
+  172  vi hosts
+  173  cd ..
+  174  mkdir hpd-wp
+  175  ls
+  176  clear
+  177  ls
+  178  cd hpd-wp/
+  179  ls
+  180  mkdir roles
+  181  cd roles/
+  182  ls
+  183  mkdir common
+  184  mkdir mysql
+  185  mkdir nginx
+  186  mkdir php-fpm
+  187  mkdir wordpress
+  188  ls
+  189  cd common/
+  190  cd ..
+  191  ls
+  192  mkdir common/task
+  193  mkdir mysql/task
+  194  mkdir nginx/task
+  195  mkdir php-fpm/task
+  196  mkdir wordpress/task
+  197  mkdir php-fpm/handlers
+  198  mkdir common/handlers
+  199  mkdir mysql/handlers
+  200  mkdir nginx/handlers
+  201  mkdir mysql/templates
+  202  mkdir common/templates
+  203  mkdir wordpress/templates
+  204  mkdir php-fpm/templates
+  205  mkdir nginx/templates
+  206  apt-get install -y tree
+  207  tree
+  208  cp /root/ansible/hosts .
+  209  ls
+  210  tree
+  211  cd ..
+  212  cp /root/ansible/hosts .
+  213  tree
+  214  cd roles/
+  215  ls
+  216  rm hosts
+  217  cd ..
+  218  tree
+  219  cd roles/
+  220  ls
+  221  cd common/
+  222  ls
+  223  mkdir files
+  224  cd ..
+  225  tree 
+  226  route
+  227  cd roles/
+  228  cd common/task/
+  229  ls
+  230  vim main.yml
+  231  apt-get python-selinux install
+  232  apt-get install python-selinux
+  233  apt autoremove
+  234  ls
+  235  cd /tmp/
+  236  ls
+  237  cd hpd-wp/
+  238  ls
+  239  clear
+  240  ls
+  241  ansible-playbook site.yml 
+  242  vim site.yml 
+  243  ansible-playbook site.yml 
+  244  cd roles/
+  245  ls
+  246  cd wordpress/
+  247  ls
+  248  cd tasks/
+  249  ls
+  250  vim main.yml 
+  251  apt-get update
+  252  apt-get install ansible
+  253  ls
+  254  cd hpd-wp/
+  255  ls
+  256  vi hosts
+  257  ansible -i hosts all -m ping
+  258  ls
+  259  mkdir ops
+  260  cd ops/
+  261  cd ..
+  262  vi hosts
+  263  cd ..
+  264  ls
+  265  mkdir ops
+  266  ls
+  267  cd hpd-wp/
+  268  cp hosts /root/ops/
+  269  ls
+  270  cd ..
+  271  cd ops/
+  272  ls
+  273  ansible-galaxy install geerlingguy.php
+  274  ansible-galaxy install geerlingguy.php --force
+  275  clear
+  276  ansible-galaxy install geerlingguy.apache --force
+  277  ansible-galaxy install geerlingguy.mysql --force
+  278  clear
+  279  vim lamp.yml
+  280  clear
+  281  ansible-playbook lamp.yml 
+  282  [WARNING]: provided hosts list is empty, only localhost is available
+  283  clear
+  284  ls
+  285  cd ..
+  286  ls
+  287  ping ansible-1
+  288  ping ansible-2
+  289  ping ansible-3
+  290  clear
+  291  ls
+  292  cd ansible/
+  293  ls
+  294  rm -rf {
+  295  ls
+  296  rm -rf playbook.yam 
+  297  ls
+  298  vi hosts
+  299  ls
+  300  clear
+  301  ls
+  302  vi nginx.yam 
+  303  mv nginx.yam nginx.yml
+  304  ls
+  305  ansible-playbook nginx.yml 
+  306  vim /etc/ansible/hosts 
+  307  ansible-playbook nginx.yml 
+  308  cd ..
+  309  ls
+  310  cd ops/
+  311  ls
+  312  ansible-playbook lamp.yml 
+  313  vim lamp.yml 
+  314  ansible-playbook lamp.yml 
+  315  ls /etc/ansible/
+  316  ls /etc/ansible/roles/geerlingguy.apache/
+  317  ls
+  318  cd /etc/ansible/roles/geerlingguy.
+  319  cd /etc/ansible/roles/
+  320  ls
+  321  cp /root/ops/lamp.yml 
+  322  cp /root/ops/lamp.yml  .
+  323  ls
+  324  ansible-playbook lamp.yml 
+  325  ls
+  326  cd /root/
+  327  ls
+  328  cd hpd-wp/
+  329  ls
+  330  vi hosts
+  331  ls
+  332  cd ..
+  333  ls
+  334  cd ops/
+  335  ls
+  336  cd ..
+  337  ls
+  338  cd ansible/
+  339  ls
+  340  ansible-playbook nginx.yml 
+  341  clear
+  342  ls
+  343  ansible-playbook nginx.yml 
+  344  ls
+  345  vi hosts
+  346  ls
+  347  vi nginx.yml 
+  348  ansible-playbook nginx.yml 
+  349  vi nginx.yml 
+  350  ansible-playbook nginx.yml 
+  351  ansible-playbook -i host anasible-3 nginx.yml 
+  352  vi nginx.yml 
+  353  ansible-playbook nginx.yml 
+  354  vim /etc/resolv.conf 
+  355  ping www.uol.com.br
+  356  ansible-playbook nginx.yml 
+  357  vim nginx.yml 
+  358  vi /etc/ansible/hosts 
+  359  ls
+  360  ansible-playbook nginx.yml 
+  361  ls
+  362  vim nginx.yml 
+  363  ansible-playbook nginx.yml 
+  364  ls
+  365  cd ..
+  366  ls
+  367  cd ops
+  368  ls
+  369  vim lamp.yml 
+  370  ansible-playbook lamp.yml 
+  371  ls
+  372  vim hosts
+  373  ls
+  374  clear
+  375  ls
+  376  ansible-playbook lamp.yml 
+  377  ls
+  378  cd /tmp/
+  379  ls
+  380  rm -rf systemd-private-cb7b79200ab8463fb881a1ee8c005076-systemd-timesyncd.service-x7Wyty/
+  381  ls
+  382  git clone https://github.com/badtuxx/hpd-wp.git
+  383  ls
+  384  cd hpd-wp/
+  385  ls
+  386  vi site.yml 
+  387  ls
+  388  ansible-playbook site.yml 
+  389  ls
+  390  cd group_vars/
+  391  ls
+  392  vi all 
+  393  cd ..
+  394  ls
+  395  ansible-playbook site.yml 
+  396  ls
+  397  cd roles/
+  398  ls
+  399  cd common/
+  400  ls
+  401  cd tasks/
+  402  ls
+  403  vim main.yml 
+  404  ls
+  405  vim main.yml 
+  406  cd ..
+  407  ls
+  408  cd mariadb/
+  409  ls
+  410  cd handlers/
+  411  ls
+  412  clear
+  413  ls
+  414  vim main.yml 
+  415  cd ..
+  416  ls
+  417  cd tasks/
+  418  çs
+  419  vim main.yml 
+  420  ls
+  421  cd ..
+  422  ls
+  423  cd templates/
+  424  ls
+  425  vim my.cnf.j2 
+  426  ls
+  427  cd ..
+  428  ls
+  429  cd ..
+  430  ls
+  431  cd nginx/
+  432  ls
+  433  clear
+  434  ls
+  435  cd handlers/
+  436  ls
+  437  vim main.yml 
+  438  cd ;;
+  439  cd ..
+  440  ls
+  441  cd tasks/
+  442  ls
+  443  vim main.yml 
+  444  cd ..
+  445  ls
+  446  clear
+  447  ls
+  448  cd templates/
+  449  ls
+  450  vim default.conf 
+  451  ls
+  452  cd ..
+  453  ls
+  454  cd ..
+  455  ls
+  456  cd php-fpm/
+  457  ls
+  458  cd handlers/
+  459  ls
+  460  vim main.yml 
+  461  ls
+  462  cd ..
+  463  ls
+  464  cd tasks/
+  465  ls
+  466  vim main.yml 
+  467  ls
+  468  cd ..
+  469  s
+  470  ls
+  471  clear
+  472  ls
+  473  cd ..
+  474  ls
+  475  cd wordpress/
+  476  ls
+  477  cd tasks/
+  478  ls
+  479  vim main.yml 
+  480  ls
+  481  cd ..
+  482  ls
+  483  cd templates/
+  484  ls
+  485  cd ..
+  486  ls
+  487  cd ..
+  488  ls
+  489  clear
+  490  ls
+  491  ansible-playbook site.yml 
+  492  cd roles/
+  493  ls
+  494  cd common/
+  495  ls
+  496  cd tasks/
+  497  l
+  498  vim main.yml 
+  499  cd ..
+  500  ansible-playbook site.yml 
+  501  cd roles/
+  502  ls
+  503  cd common/
+  504  ls
+  505  cd tasks/
+  506  vim main.yml 
+  507  cd ..
+  508  ls
+  509  cd mariadb/
+  510  ls
+  511  cd handlers/
+  512  ls
+  513  vim main.yml 
+  514  ls
+  515  cd ..
+  516  ls
+  517  cd tasks/
+  518  ls
+  519  vim main.yml 
+  520  vim /etc/hosts
+  521  ping ansible-4
+  522  ssh user@ansible-2
+  523  ping ansible-3
+  524  ping ansible-2
+  525  cd ..
+  526  ls
+  527  cd ..
+  528  ls
+  529  mv hpd-wp/ hpd-wp.old
+  530  ls
+  531  git clone https://github.com/badtuxx/hpd-wp.git
+  532  ls
+  533  cd hpd-wp
+  534  ls
+  535  vim site.yml 
+  536  ansible -i hosts -m ping
+  537  ansible -i hosts all -m ping
+  538  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-4
+  539  ping ansible-4
+  540  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-4
+  541  ansible -i hosts all -m ping
+  542  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ansible-4
+  543  ansible -i hosts all -m ping
+  544  ansible -i hosts ansible-1 -m ping
+  545  vim /etc/ansible/hosts 
+  546  ansible -i hosts ansible-1 -m ping
+  547  ansible -i hosts all -m ping
+  548  ssh ansible-4
+  549  ls
+  550  ansible -i hosts all -m ping
+  551  ansible -i hosts all -m ping -vvvv
+  552  vim /etc/ansible/ansible.cfg 
+  553  ansible -i hosts all -m ping -vvvv
+  554  ansible -i hosts all -m ping
+  555  ansible -i hosts ansible-1 -m ping
+  556  ansible -i hosts ansible-2 -m ping
+  557  ansible -i hosts ansible-3 -m ping
+  558  ls
+  559  vim site.yml 
+  560  ansible-playbook site.yml 
+  561  RUNNING HANDLER [nginx : restart nginx] ****************************************
+  562  fatal: [ansible-4]: FAILED! => {"changed": false, "failed": true, "msg": "Job for nginx.service failed because the control process exited with error code. See \"systemctl status nginx.service\" and \"journalctl -xe\" for details.\n"}
+  563  vi site.yml 
+  564  ansible-playbook site.yml 
+  565  ls
+  566  vi group_vars/
+  567  cd group_vars/
+  568  ls
+  569  vi all
+  570  ls
+  571  cd ..
+  572  ls
+  573  vi hosts
+  574  ls
+  575  vi hosts
+  576  ansible-playbook site.yml 
+  577  cd roles/
+  578  cd ..
+  579  ping ansible-4
+  580  clear
+  581  ls
+  582  tree
+  583  cd ..
+  584  clear
+  585  ls
+  586  cd ops
+  587  mkdir ops
+  588  clear
+  589  ls
+  590  lsasdf
+  591  cd hpd-wp
+  592  ls
+  593  ansible-playbook site.yml > arquivo_exec_sucess.txt
+  594  cat arquivo_exec_sucess.t
+  595  ansible-playbook site.yml
+  596  ls
+  597  vi hosts
+  598  ansible -i hosts all -m ping
+  599  vi hosts
+  600  ls
+  601  vi /etc/ansible/hosts
+  602  ansible -i hosts all -m ping
+  603  ansible-playbook -i hosts ansible-2 site.yml
+  604  ls
+  605  ansible hosts -all -m ping
+  606  ansible all -m ping
+  607  ansible
+  608  ls
+  609  ping ansible-4
+  610  ansible -i hosts ansible-2 -m ping
+  611  vim hosts
+  612  ansible -i hosts ansible-2 -m pin
+  613  vi site.yml 
+  614  ansible-playbook site.yml 
+  615  ansible-playbook -i hosts site.yml 
+  616  clear
+  617  ansible-playbook -i hosts site.yml 
+  618  apt-get install -i git
+  619  apt-get install -y git
+  620  clear
+  621  ls
+  622  clear
+  623  ansible-galaxy install geerlingguey.php --force
+  624  cd ..
+  625  cd ops/
+  626  çs
+  627  ls
+  628  ansible-galaxy install geerlingguey.php --force
+  629  ansible-galaxy install geerlingguy.php --force
+  630  clear
+  631  ansible-galaxy install geerlingguy.apache --force
+  632  ansible-galaxy install geerlingguy.mysql --force
+  633  cd ..
+  634  ls
+  635  cd hpd-wp
+  636  ls
+  637  vi roles/
+  638  ls
+  639  cd roles/
+  640  ls
+  641  cd ..
+  642  ls
+  643  clear
+  644  ls
+  645  cd ..
+  646  git clone https://github.com/Stouts/Stouts.grafana.git
+  647  ls
+  648  cd Stouts.grafana/
+  649  ls
+  650  vi test.yml 
+  651  cd tasks/
+  652  ls
+  653  vim main.yml 
+  654  vim hosts
+  655  cd ..
+  656  ansible-playbook -i host ansible-2 test.yml 
+  657  ansible-playbook -i hosts ansible-2 test.yml 
+  658  ansible-playbook -i hosts test.yml 
+  659  vi hosts
+  660  ansible-playbook -i hosts test.yml 
+  661  cd tasks/
+  662  ls
+  663  vim configure.yml 
+  664  cd ..
+  665  ansible-playbook -i hosts test.yml 
+  666  ls
+  667  cd handlers/
+  668  ls
+  669  vim main.yml 
+  670  cd ..
+  671  ls
+  672  cd templates/
+  673  ls
+  674  vi grafana.ini.j2 
+  675  ls
+  676  cd ..
+  677  ls
+  678  vi Makefile 
+  679  ls
+  680  cd defaults/
+  681  ls
+  682  vim main.yml 
+  683  cd defaults/
+  684  ls
+  685  cd ..
+  686  ls
+  687  vi test.yml 
+  688  ansible-playbook -i hosts test.yml 
+  689  cd ..
+  690  git clone https://github.com/geerlingguy/ansible-role-nginx.git
+  691  ls
+  692  cd ansible-role-nginx/
+  693  ls
+  694  vim hosts
+  695  ls
+  696  cd tests/
+  697  ls
+  698  vi test.yml 
+  699  cd ..
+  700  ansible-playbook -i hosts tests/test.yml 
+  701  ls
+  702  cd tests/
+  703  cp test.yml /tmp/ansible-role-nginx/
+  704  cd ..
+  705  ls
+  706  vi test.yml 
+  707  ansible-playbook -i hosts test.yml 
+  708  ls
+  709  vim README.md 
+  710  cd ..
+  711  rm ansible-role-nginx/
+  712  rm -rf ansible-role-nginx/
+  713  ls
+  714  git clone https://github.com/jdauphant/ansible-role-nginx.git
+  715  ls
+  716  cd ansible-role-nginx/
+  717  ls
+  718  cd ..
+  719  rm -rf ansible-role-nginx/
+  720  ls
+  721  git clone https://github.com/jdauphant/ansible-role-nginx.git
+  722  ls
+  723  cd ansible-role-nginx/
+  724  ls
+  725  cd defaults/
+  726  ls
+  727  vi main.yml 
+  728  ls
+  729  cd ..
+  730  ls
+  731  vim nginx.yml
+  732  vi hosts
+  733  ansible-playbook -i hosts nginx.yml 
+  734  ping ansible-1
+  735  ping ansible-2
+  736  ping ansible-3
+  737  apt-get update
+  738  mkdir ansible
+  739  cd ansible/
+  740  ls
+  741  clear
+  742  ls
+  743  apt-get install -y ansible
+  744  clear
+  745  cd ..
+  746  history 
+  747  history  | more
+  748  cd /tmp/
+  749  ls
+  750  clear
+  751  ls
+  752  cd ..
+  753  ls
+  754  cd /root/
+  755  ls
+  756  cd hpd-wp/
+  757  ls
+  758  cd ..
+  759  git clone https://github.com/badtuxx/hpd-wp.git
+  760  git clone https://gihub.com/badtuxx/hpd-wp.git
+  761  git clone https://github.com/badtuxx/hpd-wp.git
+  762  mv hpd-wp/ hpd-wp.old
+  763  git clone https://github.com/badtuxx/hpd-wp.git
+  764  cd hpd-wp
+  765  git init
+  766  ls
+  767  git remote add origin https://github.com/uriassousa/hpd-wp.git
+  768  ls
+  769  git README.md
+  770  git add README.md
+  771  git
+  772  git add README.md
+  773  git commit -m "Primeiro Commit"
+  774  git config --global user.email uriassousa@hotmail.com
+  775  git config --global user.name uriassousa
+  776  git remote add origin https://github.com/uriassousa/hpd-wp.git
+  777  git push -u origin master
+  778  git remote add origin https://github.com/uriassousa/hpd-wp.git
+  779  git push -u origin master
+  780  ls
+  781  git remote add origin https://github.com/uriassousa/hpd-wp.git
+  782  git config --list
+  783  clear
+  784  git config --list
+  785  git commit -m "Primeiro Commit"
+  786  ls
+  787  git init
+  788  git commit -m "Primeiro Commit"
+  789  git status
+  790  git add README
+  791  git add README1
+  792  git status
+  793  git add .
+  794  git status
+  795  git pull
+  796  git push
+  797  git pull
+  798  git remote add origin https://github.com/uriassousa/hpd-wp.git
+  799  git status
+  800  git add .
+  801  ls
+  802  git add group_vars/
+  803  git add hosts
+  804  git add roles
+  805  git add site.yml 
+  806  git status
+  807  git remote add origin https://github.com/uriassousa/hpd-wp.git
+  808  git push -u origin master
+  809  git remote add origin https://github.com/uriassousa/hpd-wp.git
+  810  git push -u or
+  811  git push -u origin master
+  812  reboot
+  813  cd hpd-wp
+  814  ls
+  815  ls la
+  816  ls -la
+  817  git remote add origin https://github.com/uriassousa/hpd-wp.git
+  818  git push -u origin master
+  819  git --help
+  820  git branch
+  821  git show
+  822  clear
+  823  ls
+  824  git remote -v
+  825  git origin --help
+  826  git remote
+  827  git fetch pb
+  828  git fetch
+  829  git remote -v
+  830  git remote show origin
+  831  git remote --v
+  832  git remote rm https://github.com/badtuxx/hpd-wp.git 
+  833  git branch
+  834  git remote set-url https://github.com/badtuxx/hpd-wp.git 
+  835  git remote set-url https://github.com/uriassousa/hpd-wp.git
+  836  git remote set-utl origin https://github.com/uriassousa/hpd-wp.git
+  837  git remote set-url origin https://github.com/uriassousa/hpd-wp.git
+  838  git push
+  839  ls
+  840  vi hosts
+  841  git status
+  842  ls
+  843  vim site.yml 
+  844  git status
+  845  git add "Ajustes no YML"
+  846  git push
+  847  git -m "commit1"
+  848  ansible-playbook -i hosts ansible-4 site.yml 
+  849  ping ansible-4
+  850  ansible-playbook -i hosts ansible-4 site.yml 
+  851  ping ansible-4
+  852  ansible-playbook -i hosts  site.yml 
+  853  ansible-playbook -i hosts  site.yml > saida_arquivo.txt
+  854  git add *
+  855  git commit -m "Segundo Commit"
+  856  git push
+  857  history > history_urias.txt
