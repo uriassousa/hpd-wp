@@ -1,0 +1,81 @@
+
+PLAY [Install WordPress, MySQL, Nginx, and PHP-FPM] ****************************
+
+TASK [setup] *******************************************************************
+ok: [ansible-4]
+
+TASK [common : Install libselinux-python] **************************************
+ok: [ansible-4]
+
+TASK [common : Install epel-release] *******************************************
+ok: [ansible-4]
+
+TASK [common : Reload ansible_facts] *******************************************
+ok: [ansible-4]
+
+TASK [mariadb : Install MariaDB package] ***************************************
+ok: [ansible-4] => (item=[u'mariadb.x86_64', u'mariadb-server', u'MySQL-python', u'libselinux-python', u'libsemanage-python'])
+
+TASK [mariadb : Configure SELinux to start mariadb on any port] ****************
+ok: [ansible-4]
+
+TASK [mariadb : Create Mysql configuration file] *******************************
+ok: [ansible-4]
+
+TASK [mariadb : Start MariaDB Service] *****************************************
+ok: [ansible-4]
+
+TASK [nginx : Install nginx] ***************************************************
+ok: [ansible-4]
+
+TASK [nginx : Creates directory] ***********************************************
+ok: [ansible-4]
+
+TASK [nginx : Copy nginx configuration for wordpress] **************************
+ok: [ansible-4]
+
+TASK [nginx : Copy nginx configuration for wordpress] **************************
+ok: [ansible-4]
+
+TASK [php-fpm : Install php-fpm and deps] **************************************
+ok: [ansible-4] => (item=[u'php', u'php-fpm', u'php-enchant', u'php-IDNA_Convert', u'php-mbstring', u'php-mysql', u'php-PHPMailer', u'php-process', u'php-simplepie', u'php-xml'])
+
+TASK [php-fpm : Disable default pool] ******************************************
+ok: [ansible-4]
+
+TASK [php-fpm : Copy php-fpm configuration] ************************************
+ok: [ansible-4]
+
+TASK [wordpress : Download WordPress] ******************************************
+ok: [ansible-4]
+
+TASK [wordpress : Extract archive] *********************************************
+ok: [ansible-4]
+
+TASK [wordpress : Add group "wordpress"] ***************************************
+ok: [ansible-4]
+
+TASK [wordpress : Add user "wordpress"] ****************************************
+ok: [ansible-4]
+
+TASK [wordpress : Fetch random salts for WordPress config] *********************
+changed: [ansible-4 -> localhost]
+
+TASK [wordpress : Create WordPress database] ***********************************
+ok: [ansible-4]
+
+TASK [wordpress : Create WordPress database user] ******************************
+ok: [ansible-4]
+
+TASK [wordpress : Copy WordPress config file] **********************************
+changed: [ansible-4]
+
+TASK [wordpress : Change ownership of WordPress installation] ******************
+ok: [ansible-4]
+
+TASK [wordpress : Start php-fpm Service] ***************************************
+ok: [ansible-4]
+
+PLAY RECAP *********************************************************************
+ansible-4                  : ok=25   changed=2    unreachable=0    failed=0   
+
